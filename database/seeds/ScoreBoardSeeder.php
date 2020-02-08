@@ -98,6 +98,6 @@ class ScoreBoardSeeder extends Seeder
             'ball_id'                  =>  1,
             'innings_no'               =>  1,
         ];
-        BallToBallMatch::updateOrCreate($data);
+        BallToBallMatch::Create($data);
     }
 }

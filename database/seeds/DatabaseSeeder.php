@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        /*$this->call(BattingStyleSeeder::class);
+        $this->call(BattingStyleSeeder::class);
         $this->call(BowlerStyleSeeder::class);
         $this->call(CountrySeeder::class);
         $this->call(RoleSeeder::class);
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(OutComeSeeder::class);
         $this->call(PlayerSeeder::class);
         $this->call(MatchSeeder::class);
-        $this->call(MatchPlayerSeeder::class);*/
+        $this->call(MatchPlayerSeeder::class);
         $this->call(ScoreBoardSeeder::class);
     }
 }

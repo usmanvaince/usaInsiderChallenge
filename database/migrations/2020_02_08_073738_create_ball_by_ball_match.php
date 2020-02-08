@@ -29,9 +29,9 @@ class CreateBallByBallMatch extends Migration
 
             $table->foreign('batting_team_id')->references('team_id')->on('team');
             $table->foreign('bowling_team_id')->references('team_id')->on('team');
-            $table->foreign('striker_batsman_id')->references('team_id')->on('team');
-            $table->foreign('non_striker_batsman_id')->references('team_id')->on('team');
-            $table->foreign('bowler_id')->references('team_id')->on('team');
+            $table->foreign('striker_batsman_id')->references('player_id')->on('player');
+            $table->foreign('non_striker_batsman_id')->references('player_id')->on('player');
+            $table->foreign('bowler_id')->references('player_id')->on('team');
 
             $table->timestamps();
         });
