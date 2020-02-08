@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -15,12 +16,12 @@
 <body>
 
     <div class="flex">
-        <div class="w-full">
+        <div class="w-full" id="app">
             @yield('content')
         </div>
     </div>
 
-
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
 

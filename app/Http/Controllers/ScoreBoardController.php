@@ -9,6 +9,10 @@ class ScoreBoardController extends Controller
 {
    public function showScoreBoard(Match $match)
    {
-       return 'usman';
+      $data['batsManScoreBoard'] = $match->with('batsManScoreBoard','batsManScoreBoard.player')->first();
+      $data['bowlerBoard']       = $match->with('bowlerBoard','bowlerBoard.player')->first();
+
+      return $data;
+      return view('scoreBoard', $data);
    }
 }

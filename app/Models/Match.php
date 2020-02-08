@@ -28,4 +28,13 @@ class Match extends Model
     {
         return $this->belongsTo('App\Models\TossDecision','toss_decide');
     }
+
+    public function batsManScoreBoard()
+    {
+        return $this->hasMany('App\Models\BatsManScoreBoard','match_id');
+    }
+    public function bowlerBoard()
+    {
+        return $this->hasMany('App\Models\BowlerBoard','match_id');
+    }
 }
